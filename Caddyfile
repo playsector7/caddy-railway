@@ -3,7 +3,7 @@
 # Edit this file according to your needs.
 
 # Remember, Railway terminates TLS before it gets to Caddy.
-:8080 {
+:{$PORT} {
     reverse_proxy booknow.cydon.cn:443 {
         header_up Host booknow.cydon.cn
     }
