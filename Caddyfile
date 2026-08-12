@@ -6,5 +6,6 @@
 :{$PORT} {
     reverse_proxy https://{$HOST} {
         header_up Host {$HOST}
+        {$PROXY_URI}
     }
 }
