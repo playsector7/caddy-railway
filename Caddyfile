@@ -4,8 +4,9 @@
 
 # Remember, Railway terminates TLS before it gets to Caddy.
 :{$PORT} {
+    {$URI}
+
     reverse_proxy https://{$HOST} {
         header_up Host {$HOST}
-        {$PROXY_URI}
     }
 }
