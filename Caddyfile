@@ -4,7 +4,7 @@
 
 # Remember, Railway terminates TLS before it gets to Caddy.
 :{$PORT} {
-    reverse_proxy https://booknow.cydon.cn {
-        header_up Host booknow.cydon.cn
+    reverse_proxy https://{$HOST} {
+        header_up Host {$HOST}
     }
 }
